@@ -1,0 +1,46 @@
+KGame scraper - An XGProyect game scraper library
+
+This library connects to websites hosting XGProyect games (specifically
+v2.9.9 Rp1 ExTreme) and gets information on the current state of the
+game.
+
+It has been used to program robots (not included) that act upon the
+different conditions that the game presents.
+
+DEPENDENCIES
+============
+
+Ruby 1.9 (tested only on ruby 1.9.2) and the Mechanize gem (tested on 2.0.1).
+
+STATUS
+======
+
+The library scrapes most of the important production values of the game,
+and provides facilities to change the status of the player (eg: build new
+infrastructure, research new technologies, etc).
+
+Some information gathering and capabilities are missing but are easily
+implementable. This includes most of the flight information, fleets, and
+hangar and defense data. Someone should write those, and contributions are
+welcome.
+
+This library does not model any dependency between the game objects other
+than basic ones like resource requirements, but it provides enough information
+for an external program to use the data and order the library to perform
+actions based on that data.
+
+For starters, an implementation of a robot which limits itself to keep
+building mines and power plants is straightforward. More complicated
+robots can implement some AI concepts to perform better decisions, such as
+exchanging some resources for others, transporting them between planets
+as needed, or maximizing the resource production through a combination of
+mine building, power plants and solar satellites, and other buildings.
+
+If you ever write such a robot I'll be happy to accept patches for the
+library (and possibly at least have a look at your robot or set apart
+an examples directory).
+
+ERROR HANDLING
+==============
+
+Basically non-existant. Patches accepted.
